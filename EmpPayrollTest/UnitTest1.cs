@@ -31,6 +31,13 @@ namespace EmpPayrollTest
             Console.WriteLine("start time=" + startTime);
             Console.WriteLine("end time=" + EndTime);
             Console.WriteLine("Duration without thread=" + (startTime - EndTime));
+
+            DateTime ThreadStartTime = DateTime.Now;
+            employeePayRollOperation.addEmployeeToPayRollWithThread(employeeDetails);
+            DateTime ThreadEndTime = DateTime.Now;
+            Console.WriteLine("start time=" + ThreadStartTime);
+            Console.WriteLine("end time=" + ThreadEndTime);
+            Console.WriteLine("Duration with thread=" + (ThreadStartTime - ThreadEndTime));
         }
     }
 }
