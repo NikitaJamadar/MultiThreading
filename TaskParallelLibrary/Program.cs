@@ -65,9 +65,9 @@ namespace TaskParallelLibrary
             return longestWord;
         }
 
-        static string[] CreateWordArray(string uri)
+        static string[] CreateWordArray(string url)
         {
-            Console.WriteLine($"Retrieving from {uri}");
+            Console.WriteLine($"Retrieving from {url}");
             string s = new WebClient().DownloadString(uri);
             return s.Split(new char[] { ' ', '\u000A', ',', '.', ';', ':', '-', '_', '/' }, StringSplitOptions.RemoveEmptyEntries);
         }
